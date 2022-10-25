@@ -1,6 +1,6 @@
-package com.vti.form;
+package vti.form;
 
-import com.vti.entity.Ram;
+import com.vti.entity.Product;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,17 +13,14 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class ProductFilterForm {
     private String search;
-
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate minCreatedDate;
-
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate maxCreatedDate;
     private Integer categoryId;
     private Double minSalePrice;
     private Double maxSalePrice;
-    private Ram ram;
+    private Product.Ram ram;
     private Integer minYear;
     private Integer maxYear;
-
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate minCreatedDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate maxCreatedDate;
 }

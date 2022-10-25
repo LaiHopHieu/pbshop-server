@@ -1,4 +1,4 @@
-package com.vti.configuration.swagger2;
+package vti.configuration.swagger2;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,11 +27,11 @@ public class Swagger2Configuration {
 
     private ApiInfo apiInfo() {
         return new ApiInfo(
-                "Application API",
-                "This is API description for Application",
-                "1.0",
-                "Terms of service URL",
-                new Contact("VTI Academy", "https://www.facebook.com/VTIAcademy/", "info@vtiacademy.edu.vn"),
+                "KShop Application",
+                "This is a simple server for a electronics shop",
+                "1.0.0",
+                "https://github.com/khoa-omega/kshop",
+                new Contact("Khoa Ômêga", "https://www.facebook.com/omegakhoa", "nvkhoa05@gmail.com"),
                 "Apache 2.0", "http://www.apache.org/licenses/LICENSE-2.0.html",
                 Collections.emptyList()
         );

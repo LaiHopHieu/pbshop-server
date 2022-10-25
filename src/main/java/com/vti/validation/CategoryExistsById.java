@@ -1,6 +1,7 @@
-package com.vti.validation;
+package vti.validation;
 
 import com.vti.validation.CategoryExistsById.List;
+import com.vti.validation.CategoryExistsByIdValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

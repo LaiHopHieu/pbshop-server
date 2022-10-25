@@ -1,6 +1,7 @@
-package com.vti.configuration.exception;
+package vti.configuration.exception;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.vti.configuration.exception.ErrorResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;

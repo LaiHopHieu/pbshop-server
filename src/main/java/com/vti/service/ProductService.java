@@ -1,10 +1,11 @@
-package com.vti.service;
+package vti.service;
 
 import com.vti.entity.Product;
 import com.vti.form.ProductCreateForm;
 import com.vti.form.ProductFilterForm;
 import com.vti.form.ProductUpdateForm;
 import com.vti.repository.IProductRepository;
+import com.vti.service.IProductService;
 import com.vti.specification.ProductSpecification;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.PropertyMap;

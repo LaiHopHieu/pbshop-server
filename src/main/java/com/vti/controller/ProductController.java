@@ -1,4 +1,4 @@
-package com.vti.controller;
+package vti.controller;
 
 import com.vti.dto.ProductDTO;
 import com.vti.entity.Product;
@@ -19,9 +19,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+@Validated
 @RestController
 @RequestMapping("/api/v1/products")
-@Validated
 public class ProductController {
     @Autowired
     private IProductService service;

@@ -1,4 +1,4 @@
-package com.vti.configuration.exception;
+package vti.configuration.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

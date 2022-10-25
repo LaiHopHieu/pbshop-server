@@ -1,6 +1,6 @@
-package com.vti.entity;
+package vti.entity;
 
-import lombok.AllArgsConstructor;
+import com.vti.entity.Category;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,49 +9,51 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
-@Entity
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
+@Entity
 @Table(name = "product")
 public class Product {
-
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
-    @Column(name = "name",nullable = false,length = 50)
+    @Column(name = "name", length = 50, unique = true, nullable = false)
     private String name;
 
-    @Column(name = "price",nullable = false)
-    private double price;
+    @Column(name = "price", nullable = false)
+    private Double price;
 
-    @Column(name = "sale_price",nullable = false)
-    private double salePrice;
+    @Column(name = "sale_price", nullable = false)
+    private Double salePrice;
 
-    @Column(name = "thumbnail_url",nullable = false)
+    @Column(name = "thumbnail_url", nullable = false)
     private String thumbnailUrl;
 
-    @Column(name = "description",length = 1023,nullable = false)
+    @Column(name = "description", length = 1023, nullable = false)
     private String description;
 
-    @Column(name = "ram",nullable = false,length = 50)
+    @Column(name = "ram", length = 5, nullable = false)
     @Enumerated(value = EnumType.STRING)
     private Ram ram;
 
-    @Column(name = "created_date",nullable = false,updatable = false)
+    @Column(name = "created_date", nullable = false, updatable = false)
     @CreationTimestamp
     private LocalDate createdDate;
 
-    @Column(name = "updated_date",nullable = false,updatable = false)
+    @Column(name = "updated_at", nullable = false)
     @UpdateTimestamp
-    private LocalDate updatedDate;
+    private LocalDateTime updatedAt;
 
     @ManyToOne
-    @JoinColumn(name = "category_id",referencedColumnName = "id",nullable = false)
+    @JoinColumn(name = "category_id", referencedColumnName = "id", nullable = false)
     private Category category;
 
+    public enum Ram {
+        _8GB, _12GB, _16GB
+    }
 }

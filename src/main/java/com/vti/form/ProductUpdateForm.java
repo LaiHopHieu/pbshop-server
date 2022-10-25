@@ -1,6 +1,6 @@
-package com.vti.form;
+package vti.form;
 
-import com.vti.entity.Ram;
+import com.vti.entity.Product;
 import com.vti.validation.CategoryExistsById;
 import com.vti.validation.ProductExistsById;
 import com.vti.validation.ProductNotExistsByName;
@@ -39,7 +39,7 @@ public class ProductUpdateForm {
     private String thumbnailUrl;
 
     @NotNull(message = "{ProductForm.ram.NotNull}")
-    private Ram ram;
+    private Product.Ram ram;
 
     @NotBlank(message = "{ProductForm.description.NotBlank}")
     @Length(max = 1023, message = "{ProductForm.description.Length}")

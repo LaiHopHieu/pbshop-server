@@ -1,6 +1,7 @@
-package com.vti.validation;
+package vti.validation;
 
 import com.vti.repository.IProductRepository;
+import com.vti.validation.ProductNotExistsByName;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.validation.ConstraintValidator;

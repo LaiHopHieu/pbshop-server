@@ -1,15 +1,15 @@
 package vti.validation;
 
-import com.vti.repository.IProductRepository;
-import com.vti.validation.ProductExistsById;
+import com.vti.repository.IAccountRepository;
+import com.vti.validation.AccountExistsById;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-public class ProductExistsByIdValidator implements ConstraintValidator<ProductExistsById, Integer> {
+public class AccountExistsByIdValidator implements ConstraintValidator<AccountExistsById, Integer> {
     @Autowired
-    private IProductRepository repository;
+    private IAccountRepository repository;
 
     @Override
     public boolean isValid(Integer id, ConstraintValidatorContext constraintValidatorContext) {

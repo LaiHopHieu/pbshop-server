@@ -1,6 +1,7 @@
-package com.vti.validation;
+package vti.validation;
 
 import com.vti.validation.ProductExistsById.List;
+import com.vti.validation.ProductExistsByIdValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

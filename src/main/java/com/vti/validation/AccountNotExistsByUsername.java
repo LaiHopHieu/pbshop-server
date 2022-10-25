@@ -1,7 +1,7 @@
 package vti.validation;
 
-import com.vti.validation.CategoryNotExistsByName.List;
-import com.vti.validation.CategoryNotExistsByNameValidator;
+import com.vti.validation.AccountNotExistsByUsername.List;
+import com.vti.validation.AccountNotExistsByUsernameValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -16,10 +16,10 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target({METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE})
 @Retention(RUNTIME)
 @Documented
-@Constraint(validatedBy = {CategoryNotExistsByNameValidator.class})
+@Constraint(validatedBy = {AccountNotExistsByUsernameValidator.class})
 @Repeatable(List.class)
-public @interface CategoryNotExistsByName {
-    String message() default "{CategoryForm.name.NotExists}";
+public @interface AccountNotExistsByUsername {
+    String message() default "{AccountForm.username.NotExists}";
 
     Class<?>[] groups() default {};
 
@@ -29,6 +29,6 @@ public @interface CategoryNotExistsByName {
     @Retention(RUNTIME)
     @Documented
     @interface List {
-        CategoryNotExistsByName[] value();
+        AccountNotExistsByUsername[] value();
     }
 }

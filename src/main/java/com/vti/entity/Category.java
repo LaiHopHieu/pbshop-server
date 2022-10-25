@@ -1,37 +1,39 @@
-package com.vti.entity;
+package vti.entity;
 
-import lombok.*;
+import com.vti.entity.Product;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
-@Entity
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
+@Entity
 @Table(name = "category")
 public class Category {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
-    @Column(name = "name",nullable = false,length = 50,unique = true)
+    @Column(name = "name", length = 50, unique = true, nullable = false)
     private String name;
 
-    @Column(name = "created_date",nullable = false,updatable = false)
+    @Column(name = "created_date", nullable = false, updatable = false)
     @CreationTimestamp
     private LocalDate createdDate;
 
-    @Column(name = "updated_date",nullable = false,updatable = false)
+    @Column(name = "updated_at", nullable = false)
     @UpdateTimestamp
-    private LocalDate updatedDate;
+    private LocalDateTime updatedAt;
 
-    @OneToMany(mappedBy = "category",cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<Product> products;
-
 }

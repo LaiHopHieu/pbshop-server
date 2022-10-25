@@ -1,4 +1,4 @@
-package com.vti.configuration.security;
+package vti.configuration.security;
 
 import com.vti.configuration.exception.AuthExceptionHandler;
 import org.springframework.context.annotation.Bean;

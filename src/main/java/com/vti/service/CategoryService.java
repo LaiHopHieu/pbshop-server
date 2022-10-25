@@ -1,10 +1,11 @@
-package com.vti.service;
+package vti.service;
 
 import com.vti.entity.Category;
 import com.vti.form.CategoryCreateForm;
 import com.vti.form.CategoryFilterForm;
 import com.vti.form.CategoryUpdateForm;
 import com.vti.repository.ICategoryRepository;
+import com.vti.service.ICategoryService;
 import com.vti.specification.CategorySpecification;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

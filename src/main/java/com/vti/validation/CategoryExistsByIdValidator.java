@@ -1,6 +1,7 @@
-package com.vti.validation;
+package vti.validation;
 
 import com.vti.repository.ICategoryRepository;
+import com.vti.validation.CategoryExistsById;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.validation.ConstraintValidator;

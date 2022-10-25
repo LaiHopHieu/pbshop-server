@@ -1,4 +1,4 @@
-package com.vti.form;
+package vti.form;
 
 import com.vti.validation.CategoryNotExistsByName;
 import lombok.Getter;

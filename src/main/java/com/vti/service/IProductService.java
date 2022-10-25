@@ -1,4 +1,4 @@
-package com.vti.service;
+package vti.service;
 
 import com.vti.entity.Product;
 import com.vti.form.ProductCreateForm;
@@ -21,6 +21,4 @@ public interface IProductService {
     void deleteById(int id);
 
     void deleteAll(List<Integer> ids);
-
-
 }

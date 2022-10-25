@@ -1,4 +1,4 @@
-package com.vti.configuration.di;
+package vti.configuration.di;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

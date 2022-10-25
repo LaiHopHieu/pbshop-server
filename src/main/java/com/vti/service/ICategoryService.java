@@ -1,4 +1,4 @@
-package com.vti.service;
+package vti.service;
 
 import com.vti.entity.Category;
 import com.vti.form.CategoryCreateForm;
